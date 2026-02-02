@@ -12,5 +12,8 @@ if [ -d "$SEED_DIR" ] && [ -z "$(ls -A "$ROOMS_DIR" 2>/dev/null)" ]; then
   cp -R "$SEED_DIR"/* "$ROOMS_DIR"/
 fi
 
+echo "Starting room daemon in background..."
+python3 -u room_daemon.py &
+
 echo "Starting room viewer on port ${PORT:-8000}..."
 exec python3 -u room_viewer.py --port "${PORT:-8000}" --room welcome-jonathan
