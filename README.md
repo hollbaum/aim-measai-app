@@ -19,3 +19,15 @@ Minimal room-chat deployment for Jonathan follow-up, based on `External/team-cha
 - `PORT=8000`
 
 On first boot, `start.sh` seeds `/data/rooms` from `/app/seed_rooms` if the volume is empty.
+
+## Deployment Status
+
+- **Deployed:** 2026-02-02 12:47 UTC
+- **Platform:** Coolify with GitHub webhook auto-deploy
+- **Domain:** https://aim.measai.app
+- **Auto-deploy:** Enabled (webhook triggers on push to main)
+
+Deployed by: Christian Hollbaum
+Infrastructure: Taynor
+Validation: Codex
+
