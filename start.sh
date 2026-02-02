@@ -16,4 +16,8 @@ echo "Starting room daemon in background..."
 python3 -u room_daemon.py &
 
 echo "Starting room viewer on port ${PORT:-8000}..."
-exec python3 -u room_viewer.py --port "${PORT:-8000}" --room welcome-jonathan
+if [ -n "$DEFAULT_ROOM" ]; then
+  exec python3 -u room_viewer.py --port "${PORT:-8000}" --room "$DEFAULT_ROOM"
+else
+  exec python3 -u room_viewer.py --port "${PORT:-8000}"
+fi
